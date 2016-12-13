@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<configs>
+	<config>
+		<server>${redis.server}</server>
+		<port>${redis.port}</port>
+		<max_active>200</max_active>
+		<max_idle>20</max_idle>
+		<min_idle>20</min_idle>
+		<max_wait>10</max_wait>
+		<db_index>${redis.dbIndex}</db_index>
+	</config>
+	<caches>
+		<cache name="default" timeToLiveSeconds="172800" />
+		<cache name="menu-" timeToLiveSeconds="172800" /><!-- 60*60*24*2 -->
+		<cache name="group-" timeToLiveSeconds="172800" />
+		<cache name="user_group_map-" timeToLiveSeconds="172800" />
+		<cache name="group_purview_cache-" timeToLiveSeconds="172800" />
+		<cache name="user" timeToLiveSeconds="172800" />
+		<cache name="forward" timeToLiveSeconds="172800" />
+	</caches>
+</configs>
